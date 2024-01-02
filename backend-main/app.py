@@ -1,10 +1,21 @@
 from flask import Flask, request, jsonify
+# Flask for creating the web application, 
+# request for handling HTTP requests, 
+# jsonify for converting Python dictionaries to JSON objects
+
 import pinecone
+# pinecone for managing the Pinecone vector index
+
 from langchain.vectorstores import Pinecone
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.llms import OpenAI
+# OpenAIEmbeddings and OpenAI from langchain for handling OpenAI's language models
+
 import db_managment
+# db_managment for database-related functions
+
 from flask_cors import CORS
+# CORS for enabling Cross-Origin Resource Sharing.
 import json
 
 OPENAI_KEY = "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"
